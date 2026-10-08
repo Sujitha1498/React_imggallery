@@ -1,0 +1,173 @@
+/* Main page */
+body {
+  background-color: #0f0c0a;
+  color: #f2f0ee;
+}
+
+/* Header */
+.header {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 30px 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.small-title {
+  margin-bottom: 12px;
+  color: #d0a05e;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.header-description {
+  max-width: 350px;
+  margin: 0;
+  color: #a1a0a6;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* Gallery */
+.gallery {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 30px 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* Image card */
+.image-card {
+  overflow: hidden;
+  background-color: #181411;
+  border: 1px solid #29221e;
+  border-radius: 4px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.image-card:hover {
+  transform: translateY(-6px);
+  border-color: #5a4e44;
+}
+
+/* Image */
+.image-container {
+  height: 390px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Card content */
+.card-content {
+  min-height: 100px;
+  padding: 20px;
+  display: flex;
+  gap: 18px;
+}
+
+.card-number {
+  color: #d0a05e;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.card-content h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.card-content p {
+  margin: 0;
+  color: #a1a0a6;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #29221e;
+  color: #7b7c8c;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  .header {
+    display: block;
+    padding-top: 50px;
+  }
+
+  .header h1 {
+    font-size: 45px;
+  }
+
+  .header-description {
+    margin-top: 20px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .header {
+    padding: 40px 20px 25px;
+  }
+
+  .header h1 {
+    font-size: 38px;
+  }
+
+  .gallery {
+    padding: 15px 20px 50px;
+    gap: 20px;
+  }
+
+  .image-container {
+    height: 300px;
+  }
+
+  .card-content {
+    padding: 16px;
+  }
+
+  .card-content h2 {
+    font-size: 19px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+}
